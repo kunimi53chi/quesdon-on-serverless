@@ -1,6 +1,6 @@
 # quesdon
 
-ザ・インタビューズとかaskfmとかそういうののMastodon版
+SNS of communicate with question (like ["ask.fm"](https://ask.fm/)) for Mastodon. This repository is forked origin and changes structure to serverless architecture (WIP) .
 
 LICENSE: [AGPL 3.0](LICENSE)
 
@@ -14,20 +14,20 @@ yarn build
 MONGODB_URL=mongodb://localhost/quesdon BACK_PORT=3000 yarn start
 ```
 
-## 開発のしかた
+## How to develop
 
-### 開発環境を立てる
+### Run development
 
-`cp .env.development .env`したあと`yarn dev`とするといろいろwatchしながら動くやつが立ち上がるのであとは <http://localhost:8080> を開くだけ
+1. `cp .env.development .env`
+2. `yarn dev`
+3. open `<http://localhost:8080>`
 
-### ファイル構造
+### File Structure
 
-言わなくても見ればわかると思いますが念のため
-
-- `src/`: ソース一式
-    - `server/`: サーバーサイドのソース
-        - `api/`: APIまわりが入ってるやつ
-        - `db/`: データベースのModel
-        - `utils/`: あちこちで使うやつ
-    - `client/`: クライアントのソース
-- `views/`: サーバーサイドが見るテンプレート(pugで書かれている)
+- `src/`: All source
+    - `server/`: Server-side source
+        - `api/`: about API
+        - `db/`: Database model
+        - `utils/`: use anywhere
+    - `client/`: client source
+- `views/`: template see server-side (written in pug)
